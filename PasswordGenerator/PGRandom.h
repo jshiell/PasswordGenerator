@@ -1,13 +1,15 @@
 //
-//  PGViewController.h
+//  PGRandom.h
 //  PasswordGenerator
 //
 //  Created by James Shiell on 09/09/2014.
 //  Copyright (c) 2014 Simia Infinitus. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface PGViewController : UIViewController
+@interface PGRandom : NSObject
+
+- (int)numberUnder: (int) boundaryExclusive;
 
 @end

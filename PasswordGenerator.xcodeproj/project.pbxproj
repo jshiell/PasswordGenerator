@@ -14,13 +14,16 @@
 		C7E5A4F919BF168C00633B95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5A4F819BF168C00633B95 /* main.m */; };
 		C7E5A4FD19BF168C00633B95 /* PGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5A4FC19BF168C00633B95 /* PGAppDelegate.m */; };
 		C7E5A50019BF168C00633B95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E5A4FE19BF168C00633B95 /* Main.storyboard */; };
-		C7E5A50319BF168C00633B95 /* PGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5A50219BF168C00633B95 /* PGViewController.m */; };
+		C7E5A50319BF168C00633B95 /* PGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5A50219BF168C00633B95 /* PGMainViewController.m */; };
 		C7E5A50519BF168C00633B95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E5A50419BF168C00633B95 /* Images.xcassets */; };
 		C7E5A50C19BF168C00633B95 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5A50B19BF168C00633B95 /* XCTest.framework */; };
 		C7E5A50D19BF168C00633B95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5A4EC19BF168C00633B95 /* Foundation.framework */; };
 		C7E5A50E19BF168C00633B95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5A4F019BF168C00633B95 /* UIKit.framework */; };
 		C7E5A51619BF168C00633B95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7E5A51419BF168C00633B95 /* InfoPlist.strings */; };
 		C7E5A51819BF168C00633B95 /* PasswordGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5A51719BF168C00633B95 /* PasswordGeneratorTests.m */; };
+		C7E5A52319BF1AEB00633B95 /* PGPasswordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5A52219BF1AEB00633B95 /* PGPasswordTableViewController.m */; };
+		C7E5A52A19BF1DEA00633B95 /* PGAlphaNumericGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5A52919BF1DEA00633B95 /* PGAlphaNumericGenerator.m */; };
+		C7E5A52E19BF303600633B95 /* PGRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5A52D19BF303600633B95 /* PGRandom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +48,21 @@
 		C7E5A4FB19BF168C00633B95 /* PGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGAppDelegate.h; sourceTree = "<group>"; };
 		C7E5A4FC19BF168C00633B95 /* PGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGAppDelegate.m; sourceTree = "<group>"; };
 		C7E5A4FF19BF168C00633B95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C7E5A50119BF168C00633B95 /* PGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGViewController.h; sourceTree = "<group>"; };
-		C7E5A50219BF168C00633B95 /* PGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGViewController.m; sourceTree = "<group>"; };
+		C7E5A50119BF168C00633B95 /* PGMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGMainViewController.h; sourceTree = "<group>"; };
+		C7E5A50219BF168C00633B95 /* PGMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGMainViewController.m; sourceTree = "<group>"; };
 		C7E5A50419BF168C00633B95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C7E5A50A19BF168C00633B95 /* PasswordGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E5A50B19BF168C00633B95 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C7E5A51319BF168C00633B95 /* PasswordGeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PasswordGeneratorTests-Info.plist"; sourceTree = "<group>"; };
 		C7E5A51519BF168C00633B95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7E5A51719BF168C00633B95 /* PasswordGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordGeneratorTests.m; sourceTree = "<group>"; };
+		C7E5A52119BF1AEB00633B95 /* PGPasswordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPasswordTableViewController.h; sourceTree = "<group>"; };
+		C7E5A52219BF1AEB00633B95 /* PGPasswordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPasswordTableViewController.m; sourceTree = "<group>"; };
+		C7E5A52819BF1DEA00633B95 /* PGAlphaNumericGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAlphaNumericGenerator.h; sourceTree = "<group>"; };
+		C7E5A52919BF1DEA00633B95 /* PGAlphaNumericGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGAlphaNumericGenerator.m; sourceTree = "<group>"; };
+		C7E5A52B19BF217F00633B95 /* PGGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGGenerator.h; sourceTree = "<group>"; };
+		C7E5A52C19BF303600633B95 /* PGRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGRandom.h; sourceTree = "<group>"; };
+		C7E5A52D19BF303600633B95 /* PGRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGRandom.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +122,14 @@
 		C7E5A4F219BF168C00633B95 /* PasswordGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				C7E5A52419BF1CF600633B95 /* Generators */,
 				C7E5A4FB19BF168C00633B95 /* PGAppDelegate.h */,
 				C7E5A4FC19BF168C00633B95 /* PGAppDelegate.m */,
 				C7E5A4FE19BF168C00633B95 /* Main.storyboard */,
-				C7E5A50119BF168C00633B95 /* PGViewController.h */,
-				C7E5A50219BF168C00633B95 /* PGViewController.m */,
+				C7E5A50119BF168C00633B95 /* PGMainViewController.h */,
+				C7E5A50219BF168C00633B95 /* PGMainViewController.m */,
+				C7E5A52119BF1AEB00633B95 /* PGPasswordTableViewController.h */,
+				C7E5A52219BF1AEB00633B95 /* PGPasswordTableViewController.m */,
 				C7E5A50419BF168C00633B95 /* Images.xcassets */,
 				C7E5A4F319BF168C00633B95 /* Supporting Files */,
 			);
@@ -150,6 +163,18 @@
 				C7E5A51419BF168C00633B95 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7E5A52419BF1CF600633B95 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				C7E5A52819BF1DEA00633B95 /* PGAlphaNumericGenerator.h */,
+				C7E5A52919BF1DEA00633B95 /* PGAlphaNumericGenerator.m */,
+				C7E5A52B19BF217F00633B95 /* PGGenerator.h */,
+				C7E5A52C19BF303600633B95 /* PGRandom.h */,
+				C7E5A52D19BF303600633B95 /* PGRandom.m */,
+			);
+			name = Generators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E5A52A19BF1DEA00633B95 /* PGAlphaNumericGenerator.m in Sources */,
 				C7E5A4F919BF168C00633B95 /* main.m in Sources */,
-				C7E5A50319BF168C00633B95 /* PGViewController.m in Sources */,
+				C7E5A50319BF168C00633B95 /* PGMainViewController.m in Sources */,
+				C7E5A52E19BF303600633B95 /* PGRandom.m in Sources */,
+				C7E5A52319BF1AEB00633B95 /* PGPasswordTableViewController.m in Sources */,
 				C7E5A4FD19BF168C00633B95 /* PGAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
