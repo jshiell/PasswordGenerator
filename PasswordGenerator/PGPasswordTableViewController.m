@@ -59,16 +59,36 @@
     }
 }
 
+- (int)groupSizeFor:(NSString *)text {
+    if ([text length] % 4 == 0) {
+        return 4;
+    }
+    if ([text length] % 3 == 0 || [text length] % 3 > [text length] % 4) {
+        return 3;
+    }
+    return 4;
+}
+
 - (NSAttributedString *)formatPassword:(NSString *)password {
     NSCharacterSet *numbers = [NSCharacterSet decimalDigitCharacterSet];
     NSCharacterSet *alpha = [NSCharacterSet letterCharacterSet];
     
-    NSMutableAttributedString *attrPassword = [[NSMutableAttributedString alloc] initWithString: password];
+    NSMutableString *spacedPassword = [[NSMutableString alloc] init];
+    int groupSize = [self groupSizeFor:password];
     for (int i = 0; i < [password length]; ++i) {
-        unichar currentChar = [password characterAtIndex:i];
+        if (i > 0 && i % groupSize == 0) {
+            [spacedPassword appendString:@" "];
+        }
+        [spacedPassword appendString: [password substringWithRange:NSMakeRange(i, 1)]];
+    }
+    
+    
+    NSMutableAttributedString *attrPassword = [[NSMutableAttributedString alloc] initWithString: spacedPassword];
+    for (int i = 0; i < [spacedPassword length]; ++i) {
+        unichar currentChar = [spacedPassword characterAtIndex:i];
         if ([numbers characterIsMember:currentChar]) {
             [attrPassword addAttribute:NSForegroundColorAttributeName value:self.numberColour range:NSMakeRange(i, 1)];
-        } else if (![alpha characterIsMember:currentChar]) {
+        } else if (currentChar != ' ' && ![alpha characterIsMember:currentChar]) {
             [attrPassword addAttribute:NSForegroundColorAttributeName value:self.punctuationColour range:NSMakeRange(i, 1)];
         }
     }

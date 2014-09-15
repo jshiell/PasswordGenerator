@@ -32,8 +32,8 @@
 @end
 
 static const int MINIMUM_PASSWORD_LENGTH = 5;
-static const int MAXIMUM_PASSWORD_LENGTH = 28;
-static const int DEFAULT_PASSWORD_LENGTH = 16;
+static const int MAXIMUM_PASSWORD_LENGTH = 64;
+static const int DEFAULT_PASSWORD_LENGTH = 20;
 
 @implementation PGGeneratorTableViewController
 
@@ -115,7 +115,7 @@ static const int DEFAULT_PASSWORD_LENGTH = 16;
 }
 
 - (IBAction)allowRepititionToggled:(UISwitch *)sender {
-    self.useSymbols = sender.on;
+    self.allowRepitition = sender.on;
     [self ensureGenerationIsPossible];
 }
 
