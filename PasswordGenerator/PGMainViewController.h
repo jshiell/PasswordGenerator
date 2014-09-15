@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGMainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface PGMainViewController : UIViewController
 
 @end

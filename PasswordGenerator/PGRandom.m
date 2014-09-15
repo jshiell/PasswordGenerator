@@ -19,7 +19,7 @@
     return randomNumber;
 }
 
-- (int)numberUnder: (int) boundaryExclusive {
+- (UInt32)numberUnder: (UInt32) boundaryExclusive {
     if (boundaryExclusive <= 0) {
         NSLog(@"Random number requested under %d", boundaryExclusive);
         return 0;

@@ -37,11 +37,11 @@
     NSArray *symbols = [self availableSymbols];
     NSString *lastSymbol = nil;
     for (int i = 0; i < self.length; ++i) {
-        NSString *nextSymbol = [symbols objectAtIndex: [self.random numberUnder:[symbols count]]];
+        NSString *nextSymbol = [symbols objectAtIndex: [self.random numberUnder:(UInt32) [symbols count]]];
         while (self.removeAmbiguousCharacters
             && lastSymbol != nil
             && [lastSymbol isEqualToString:nextSymbol]) {
-            nextSymbol = [symbols objectAtIndex: [self.random numberUnder:[symbols count]]];
+            nextSymbol = [symbols objectAtIndex: [self.random numberUnder:(UInt32) [symbols count]]];
         }
         [generated appendString:nextSymbol];
         lastSymbol = nextSymbol;

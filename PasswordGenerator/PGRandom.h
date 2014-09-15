@@ -10,6 +10,6 @@
 
 @interface PGRandom : NSObject
 
-- (int)numberUnder: (int) boundaryExclusive;
+- (UInt32)numberUnder: (UInt32) boundaryExclusive;
 
 @end

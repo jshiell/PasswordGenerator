@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7C55E5019C7028A00C15615 /* PGGeneratorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C55E4F19C7028A00C15615 /* PGGeneratorTableViewController.m */; };
 		C7E5A4ED19BF168C00633B95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5A4EC19BF168C00633B95 /* Foundation.framework */; };
 		C7E5A4EF19BF168C00633B95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5A4EE19BF168C00633B95 /* CoreGraphics.framework */; };
 		C7E5A4F119BF168C00633B95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5A4F019BF168C00633B95 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C7C55E4E19C7028A00C15615 /* PGGeneratorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGGeneratorTableViewController.h; sourceTree = "<group>"; };
+		C7C55E4F19C7028A00C15615 /* PGGeneratorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGGeneratorTableViewController.m; sourceTree = "<group>"; };
 		C7E5A4E919BF168C00633B95 /* PasswordGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E5A4EC19BF168C00633B95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7E5A4EE19BF168C00633B95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +129,8 @@
 				C7E5A4FB19BF168C00633B95 /* PGAppDelegate.h */,
 				C7E5A4FC19BF168C00633B95 /* PGAppDelegate.m */,
 				C7E5A4FE19BF168C00633B95 /* Main.storyboard */,
+				C7C55E4E19C7028A00C15615 /* PGGeneratorTableViewController.h */,
+				C7C55E4F19C7028A00C15615 /* PGGeneratorTableViewController.m */,
 				C7E5A50119BF168C00633B95 /* PGMainViewController.h */,
 				C7E5A50219BF168C00633B95 /* PGMainViewController.m */,
 				C7E5A52119BF1AEB00633B95 /* PGPasswordTableViewController.h */,
@@ -275,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C55E5019C7028A00C15615 /* PGGeneratorTableViewController.m in Sources */,
 				C7E5A52A19BF1DEA00633B95 /* PGAlphaNumericGenerator.m in Sources */,
 				C7E5A4F919BF168C00633B95 /* main.m in Sources */,
 				C7E5A50319BF168C00633B95 /* PGMainViewController.m in Sources */,
@@ -485,6 +491,7 @@
 				C7E5A51D19BF168C00633B95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7E5A51E19BF168C00633B95 /* Build configuration list for PBXNativeTarget "PasswordGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +500,7 @@
 				C7E5A52019BF168C00633B95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
