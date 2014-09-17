@@ -7,13 +7,14 @@
 //
 
 #import "PGPasswordTableViewController.h"
+#import "PGPasswordDetailViewController.h"
+#import "PGPasswordFormatter.h"
 
 @interface PGPasswordTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray* generatedPasswords;
 @property (nonatomic, strong) UIRefreshControl* refreshControl;
-@property (nonatomic, strong) UIColor* numberColour;
-@property (nonatomic, strong) UIColor* punctuationColour;
+@property (nonatomic, strong) PGPasswordFormatter* passwordFormatter;
 
 @property (strong, nonatomic) IBOutlet UITableView *passwordTableView;
 
@@ -25,8 +26,7 @@
 {
     [super viewDidLoad];
     
-    self.numberColour = [UIColor colorWithRed:0.14 green:0.47 blue:1 alpha:1];
-    self.punctuationColour = [UIColor colorWithRed:0.79 green:0.28 blue:0.08 alpha:1];
+    self.passwordFormatter = [[PGPasswordFormatter alloc] init];
     
     self.generatedPasswords = [[NSMutableArray alloc] init];
     [self generateNumberOfPasswords: [self numberOfPasswordsToShow]];
@@ -49,7 +49,7 @@
 }
 
 - (int)numberOfPasswordsToShow {
-    return 10;
+    return 10; // TODO this should be based on screen size, ish
 }
 
 - (void)generateNumberOfPasswords:(int)count {
@@ -57,43 +57,6 @@
     for (int i = 0; i < count; ++i) {
         [self.generatedPasswords addObject:[self.generator generate]];
     }
-}
-
-- (int)groupSizeFor:(NSString *)text {
-    if ([text length] % 4 == 0) {
-        return 4;
-    }
-    if ([text length] % 3 == 0 || [text length] % 3 > [text length] % 4) {
-        return 3;
-    }
-    return 4;
-}
-
-- (NSAttributedString *)formatPassword:(NSString *)password {
-    NSCharacterSet *numbers = [NSCharacterSet decimalDigitCharacterSet];
-    NSCharacterSet *alpha = [NSCharacterSet letterCharacterSet];
-    
-    NSMutableString *spacedPassword = [[NSMutableString alloc] init];
-    int groupSize = [self groupSizeFor:password];
-    for (int i = 0; i < [password length]; ++i) {
-        if (i > 0 && i % groupSize == 0) {
-            [spacedPassword appendString:@" "];
-        }
-        [spacedPassword appendString: [password substringWithRange:NSMakeRange(i, 1)]];
-    }
-    
-    
-    NSMutableAttributedString *attrPassword = [[NSMutableAttributedString alloc] initWithString: spacedPassword];
-    for (int i = 0; i < [spacedPassword length]; ++i) {
-        unichar currentChar = [spacedPassword characterAtIndex:i];
-        if ([numbers characterIsMember:currentChar]) {
-            [attrPassword addAttribute:NSForegroundColorAttributeName value:self.numberColour range:NSMakeRange(i, 1)];
-        } else if (currentChar != ' ' && ![alpha characterIsMember:currentChar]) {
-            [attrPassword addAttribute:NSForegroundColorAttributeName value:self.punctuationColour range:NSMakeRange(i, 1)];
-        }
-    }
-    
-    return attrPassword;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -110,14 +73,17 @@
     
     NSString* generatedPassword = [self.generatedPasswords objectAtIndex:indexPath.row];
     
-    [cell.textLabel setAttributedText:[self formatPassword:generatedPassword]];
     [cell.textLabel setFont:[UIFont fontWithName:@"Courier" size: [UIFont labelFontSize]]];
+    [cell.textLabel setAttributedText:[self.passwordFormatter format:generatedPassword]];
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [UIPasteboard generalPasteboard].string = [self.generatedPasswords objectAtIndex:indexPath.row];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"ShowPasswordDetail"]) {
+        NSIndexPath *selectionPath = [self.passwordTableView indexPathForSelectedRow];
+        PGPasswordDetailViewController *controller = [segue destinationViewController];
+        controller.password = [self.generatedPasswords objectAtIndex:selectionPath.row];
+    }
 }
 
 @end

@@ -32,7 +32,7 @@
 @end
 
 static const int MINIMUM_PASSWORD_LENGTH = 5;
-static const int MAXIMUM_PASSWORD_LENGTH = 64;
+static const int MAXIMUM_PASSWORD_LENGTH = 128;
 static const int DEFAULT_PASSWORD_LENGTH = 20;
 
 @implementation PGGeneratorTableViewController
