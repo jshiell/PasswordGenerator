@@ -8,4 +8,4 @@ To Do
 
 * Icons
 * Diceware support
-* Number of passwords shown should be based on view height
+* Better landscape support

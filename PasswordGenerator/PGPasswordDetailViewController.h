@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PGGenerator.h"
 
 @interface PGPasswordDetailViewController : UIViewController
 
-@property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) id <PGGenerator> generator;
 
 @end

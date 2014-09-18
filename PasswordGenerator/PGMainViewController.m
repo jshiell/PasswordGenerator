@@ -7,7 +7,7 @@
 //
 
 #import "PGMainViewController.h"
-#import "PGPasswordTableViewController.h"
+#import "PGPasswordDetailViewController.h"
 #import "PGGeneratorTableViewController.h"
 #import "PGGenerator.h"
 
@@ -35,9 +35,9 @@
         self.generatorController = [segue destinationViewController];
         [self.generatorController addObserver:self forKeyPath:NSStringFromSelector(@selector(valid)) options:NSKeyValueObservingOptionNew context:NULL];
         
-    } else if ([[segue identifier] isEqualToString:@"GeneratePasswords"]) {
-        PGPasswordTableViewController* passwordTableViewController = [segue destinationViewController];
-        passwordTableViewController.generator = [self.generatorController createGenerator];
+    } else if ([[segue identifier] isEqualToString:@"ShowPasswordDetail"]) {
+        PGPasswordDetailViewController* passwordDetailViewController = [segue destinationViewController];
+        passwordDetailViewController.generator = [self.generatorController createGenerator];
     }
 }
 
