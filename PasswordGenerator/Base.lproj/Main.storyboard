@@ -380,7 +380,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gzT-uH-C18">
                                 <rect key="frame" x="16" y="72" width="288" height="29"/>
                                 <segments>
-                                    <segment title="Alpha-numeric"/>
+                                    <segment title="Random"/>
                                     <segment title="Memorable"/>
                                 </segments>
                                 <connections>
