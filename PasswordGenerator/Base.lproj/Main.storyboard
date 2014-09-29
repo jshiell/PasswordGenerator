@@ -260,7 +260,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Length" footerTitle="Word list is copyright A G Reinhold and used under the Creative Commons CC-BY 3.0 licence." id="sfm-ku-rPT">
+                            <tableViewSection headerTitle="Length" footerTitle="Diceware generation technique and word list are copyright A G Reinhold and used under the Creative Commons CC-BY 3.0 licence." id="sfm-ku-rPT">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HdK-t2-KRy">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -348,7 +348,6 @@
                             <constraint firstItem="yNA-PP-sQP" firstAttribute="leading" secondItem="Wkp-Gv-mWf" secondAttribute="leading" id="fpm-9Z-IvY"/>
                             <constraint firstItem="Qqf-GG-ecf" firstAttribute="top" secondItem="yNA-PP-sQP" secondAttribute="bottom" id="j7K-Yf-5bT"/>
                             <constraint firstItem="Qqf-GG-ecf" firstAttribute="top" secondItem="LYA-0G-JTr" secondAttribute="bottom" constant="8" symbolic="YES" id="sko-ag-yXk"/>
-                            <constraint firstItem="LYA-0G-JTr" firstAttribute="centerX" secondItem="yNA-PP-sQP" secondAttribute="centerX" id="xQF-Ko-2Ww"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Password" id="rLV-bT-RcH">
