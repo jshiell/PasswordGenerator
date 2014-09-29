@@ -377,7 +377,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gzT-uH-C18">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gzT-uH-C18">
                                 <rect key="frame" x="16" y="72" width="288" height="29"/>
                                 <segments>
                                     <segment title="Alpha-numeric"/>
@@ -387,7 +387,7 @@
                                     <action selector="passwordGeneratorChanged:" destination="ODV-Sw-Ruk" eventType="valueChanged" id="Xht-oZ-dVh"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nLf-aG-gVQ">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLf-aG-gVQ">
                                 <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <connections>
                                     <segue destination="mme-Gu-GX7" kind="embed" identifier="GeneratorTableEmbed" id="Mdv-hv-Ymw"/>
@@ -398,11 +398,13 @@
                         <constraints>
                             <constraint firstItem="47u-qJ-ZFD" firstAttribute="top" secondItem="nLf-aG-gVQ" secondAttribute="bottom" id="5ld-Uh-7EC"/>
                             <constraint firstItem="nLf-aG-gVQ" firstAttribute="top" secondItem="gzT-uH-C18" secondAttribute="bottom" constant="8" symbolic="YES" id="Nmc-aP-zZa"/>
+                            <constraint firstItem="gzT-uH-C18" firstAttribute="top" secondItem="koH-DO-V9F" secondAttribute="bottom" constant="8" id="Qn1-yQ-1A9"/>
                             <constraint firstItem="nLf-aG-gVQ" firstAttribute="leading" secondItem="fqb-ra-i6c" secondAttribute="leadingMargin" constant="-16" id="Vyj-7N-XhP"/>
                             <constraint firstItem="gzT-uH-C18" firstAttribute="trailing" secondItem="fqb-ra-i6c" secondAttribute="trailingMargin" id="Xk2-3a-3ys"/>
                             <constraint firstItem="gzT-uH-C18" firstAttribute="leading" secondItem="fqb-ra-i6c" secondAttribute="leadingMargin" id="dca-gq-al1"/>
                             <constraint firstItem="nLf-aG-gVQ" firstAttribute="top" secondItem="gzT-uH-C18" secondAttribute="bottom" constant="8" id="mnB-M7-efm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nLf-aG-gVQ" secondAttribute="trailing" constant="-16" id="vqx-xr-vxD"/>
+                            <constraint firstItem="nLf-aG-gVQ" firstAttribute="top" secondItem="gzT-uH-C18" secondAttribute="bottom" constant="8" id="yVL-da-Qdr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ShZ-wu-vI5">
