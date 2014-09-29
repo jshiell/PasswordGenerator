@@ -21,5 +21,6 @@
 @property (nonatomic) BOOL allowRepitition;
 
 - (NSString*)generate;
+- (BOOL)isFormatted;
 
 @end

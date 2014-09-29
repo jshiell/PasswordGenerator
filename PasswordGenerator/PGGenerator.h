@@ -11,5 +11,6 @@
 @protocol PGGenerator <NSObject>
 
 - (NSString*)generate;
+- (BOOL)isFormatted;
 
 @end

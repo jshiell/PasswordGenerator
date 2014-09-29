@@ -1,15 +1,15 @@
 //
-//  PGGeneratorTableViewController.m
+//  PGAlphaNumericGeneratorTableViewController.m
 //  PasswordGenerator
 //
 //  Created by James Shiell on 15/09/2014.
 //  Copyright (c) 2014 Simia Infinitus. All rights reserved.
 //
 
-#import "PGGeneratorTableViewController.h"
+#import "PGAlphaNumericGeneratorTableViewController.h"
 #import "PGAlphaNumericGenerator.h"
 
-@interface PGGeneratorTableViewController ()
+@interface PGAlphaNumericGeneratorTableViewController ()
 
 @property (nonatomic, readwrite) BOOL valid;
 @property (nonatomic) int passwordLength;
@@ -35,7 +35,7 @@ static const int MINIMUM_PASSWORD_LENGTH = 5;
 static const int MAXIMUM_PASSWORD_LENGTH = 128;
 static const int DEFAULT_PASSWORD_LENGTH = 20;
 
-@implementation PGGeneratorTableViewController
+@implementation PGAlphaNumericGeneratorTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

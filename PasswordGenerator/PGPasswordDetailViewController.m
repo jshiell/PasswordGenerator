@@ -38,9 +38,14 @@
 
 - (IBAction)generatePassword:(id)sender {
     self.password = [self.generator generate];
-    
-    PGPasswordFormatter *passwordFormatter = [[PGPasswordFormatter alloc] initWithLineBreaks:YES];
-    NSMutableAttributedString *formattedPassword = [[NSMutableAttributedString alloc] initWithAttributedString:[passwordFormatter format:self.password]];
+
+    NSMutableAttributedString *formattedPassword;
+    if ([self.generator isFormatted]) {
+        formattedPassword = [[NSMutableAttributedString alloc] initWithString:self.password];
+    } else {
+        PGPasswordFormatter *passwordFormatter = [[PGPasswordFormatter alloc] initWithLineBreaks:YES];
+        formattedPassword = [[NSMutableAttributedString alloc] initWithAttributedString:[passwordFormatter format:self.password]];
+    }
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.paragraphSpacing = 1;

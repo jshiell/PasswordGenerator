@@ -50,6 +50,10 @@
     return [generated copy];
 }
 
+- (BOOL)isFormatted {
+    return NO;
+}
+
 - (NSArray *)availableSymbols {
     NSMutableArray *symbols = [[NSMutableArray alloc] init];
     

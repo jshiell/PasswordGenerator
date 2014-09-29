@@ -1,5 +1,5 @@
 //
-//  PGGeneratorTableViewController.h
+//  PGAlphaNumericGeneratorTableViewController.h
 //  PasswordGenerator
 //
 //  Created by James Shiell on 15/09/2014.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PGGenerator.h"
+#import "PGGeneratorFactory.h"
 
-@interface PGGeneratorTableViewController : UITableViewController
+@interface PGAlphaNumericGeneratorTableViewController : UITableViewController <PGGeneratorFactory>
 
 @property (nonatomic, readonly) BOOL valid;
 

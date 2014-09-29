@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C761C1FB19D97365001487BA /* PGMemorableGeneratorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C761C1FA19D97365001487BA /* PGMemorableGeneratorTableViewController.m */; };
+		C761C1FE19D98145001487BA /* PGMemorableGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C761C1FD19D98145001487BA /* PGMemorableGenerator.m */; };
+		C761C20019D985B3001487BA /* diceware.wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = C761C1FF19D985B3001487BA /* diceware.wordlist.txt */; };
 		C792454419C9D019008C350D /* PGPasswordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C792454319C9D019008C350D /* PGPasswordDetailViewController.m */; };
 		C792454719C9D32A008C350D /* PGPasswordFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C792454619C9D32A008C350D /* PGPasswordFormatter.m */; };
 		C792454A19C9EA4F008C350D /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = C792454819C9EA4F008C350D /* LICENCE */; };
 		C792454B19C9EA4F008C350D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C792454919C9EA4F008C350D /* README.md */; };
 		C7B691AD19CAEF4000D1F81B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B691AC19CAEF4000D1F81B /* LaunchScreen.storyboard */; };
-		C7C55E5019C7028A00C15615 /* PGGeneratorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C55E4F19C7028A00C15615 /* PGGeneratorTableViewController.m */; };
+		C7C55E5019C7028A00C15615 /* PGAlphaNumericGeneratorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C55E4F19C7028A00C15615 /* PGAlphaNumericGeneratorTableViewController.m */; };
 		C7E5A4ED19BF168C00633B95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5A4EC19BF168C00633B95 /* Foundation.framework */; };
 		C7E5A4EF19BF168C00633B95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5A4EE19BF168C00633B95 /* CoreGraphics.framework */; };
 		C7E5A4F119BF168C00633B95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5A4F019BF168C00633B95 /* UIKit.framework */; };
@@ -42,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C761C1F819D97007001487BA /* PGGeneratorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGGeneratorFactory.h; sourceTree = "<group>"; };
+		C761C1F919D97365001487BA /* PGMemorableGeneratorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMemorableGeneratorTableViewController.h; sourceTree = "<group>"; };
+		C761C1FA19D97365001487BA /* PGMemorableGeneratorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGMemorableGeneratorTableViewController.m; sourceTree = "<group>"; };
+		C761C1FC19D98145001487BA /* PGMemorableGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMemorableGenerator.h; sourceTree = "<group>"; };
+		C761C1FD19D98145001487BA /* PGMemorableGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGMemorableGenerator.m; sourceTree = "<group>"; };
+		C761C1FF19D985B3001487BA /* diceware.wordlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = diceware.wordlist.txt; sourceTree = "<group>"; };
 		C792454219C9D019008C350D /* PGPasswordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPasswordDetailViewController.h; sourceTree = "<group>"; };
 		C792454319C9D019008C350D /* PGPasswordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPasswordDetailViewController.m; sourceTree = "<group>"; };
 		C792454519C9D32A008C350D /* PGPasswordFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPasswordFormatter.h; sourceTree = "<group>"; };
@@ -49,8 +58,8 @@
 		C792454819C9EA4F008C350D /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		C792454919C9EA4F008C350D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C7B691AC19CAEF4000D1F81B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C7C55E4E19C7028A00C15615 /* PGGeneratorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGGeneratorTableViewController.h; sourceTree = "<group>"; };
-		C7C55E4F19C7028A00C15615 /* PGGeneratorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGGeneratorTableViewController.m; sourceTree = "<group>"; };
+		C7C55E4E19C7028A00C15615 /* PGAlphaNumericGeneratorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAlphaNumericGeneratorTableViewController.h; sourceTree = "<group>"; };
+		C7C55E4F19C7028A00C15615 /* PGAlphaNumericGeneratorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGAlphaNumericGeneratorTableViewController.m; sourceTree = "<group>"; };
 		C7E5A4E919BF168C00633B95 /* PasswordGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E5A4EC19BF168C00633B95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7E5A4EE19BF168C00633B95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,8 +150,11 @@
 				C7B691AC19CAEF4000D1F81B /* LaunchScreen.storyboard */,
 				C792454219C9D019008C350D /* PGPasswordDetailViewController.h */,
 				C792454319C9D019008C350D /* PGPasswordDetailViewController.m */,
-				C7C55E4E19C7028A00C15615 /* PGGeneratorTableViewController.h */,
-				C7C55E4F19C7028A00C15615 /* PGGeneratorTableViewController.m */,
+				C7C55E4E19C7028A00C15615 /* PGAlphaNumericGeneratorTableViewController.h */,
+				C7C55E4F19C7028A00C15615 /* PGAlphaNumericGeneratorTableViewController.m */,
+				C761C1F919D97365001487BA /* PGMemorableGeneratorTableViewController.h */,
+				C761C1FA19D97365001487BA /* PGMemorableGeneratorTableViewController.m */,
+				C761C1F819D97007001487BA /* PGGeneratorFactory.h */,
 				C7E5A50119BF168C00633B95 /* PGMainViewController.h */,
 				C7E5A50219BF168C00633B95 /* PGMainViewController.m */,
 				C792454519C9D32A008C350D /* PGPasswordFormatter.h */,
@@ -156,6 +168,7 @@
 		C7E5A4F319BF168C00633B95 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C761C1FF19D985B3001487BA /* diceware.wordlist.txt */,
 				C792454819C9EA4F008C350D /* LICENCE */,
 				C792454919C9EA4F008C350D /* README.md */,
 				C7E5A4F419BF168C00633B95 /* PasswordGenerator-Info.plist */,
@@ -189,6 +202,8 @@
 			children = (
 				C7E5A52819BF1DEA00633B95 /* PGAlphaNumericGenerator.h */,
 				C7E5A52919BF1DEA00633B95 /* PGAlphaNumericGenerator.m */,
+				C761C1FC19D98145001487BA /* PGMemorableGenerator.h */,
+				C761C1FD19D98145001487BA /* PGMemorableGenerator.m */,
 				C7E5A52B19BF217F00633B95 /* PGGenerator.h */,
 				C7E5A52C19BF303600633B95 /* PGRandom.h */,
 				C7E5A52D19BF303600633B95 /* PGRandom.m */,
@@ -278,6 +293,7 @@
 				C792454A19C9EA4F008C350D /* LICENCE in Resources */,
 				C7B691AD19CAEF4000D1F81B /* LaunchScreen.storyboard in Resources */,
 				C7E5A50019BF168C00633B95 /* Main.storyboard in Resources */,
+				C761C20019D985B3001487BA /* diceware.wordlist.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,10 +313,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C792454719C9D32A008C350D /* PGPasswordFormatter.m in Sources */,
-				C7C55E5019C7028A00C15615 /* PGGeneratorTableViewController.m in Sources */,
+				C7C55E5019C7028A00C15615 /* PGAlphaNumericGeneratorTableViewController.m in Sources */,
+				C761C1FB19D97365001487BA /* PGMemorableGeneratorTableViewController.m in Sources */,
 				C792454B19C9EA4F008C350D /* README.md in Sources */,
 				C7E5A52A19BF1DEA00633B95 /* PGAlphaNumericGenerator.m in Sources */,
 				C7E5A4F919BF168C00633B95 /* main.m in Sources */,
+				C761C1FE19D98145001487BA /* PGMemorableGenerator.m in Sources */,
 				C7E5A50319BF168C00633B95 /* PGMainViewController.m in Sources */,
 				C7E5A52E19BF303600633B95 /* PGRandom.m in Sources */,
 				C792454419C9D019008C350D /* PGPasswordDetailViewController.m in Sources */,

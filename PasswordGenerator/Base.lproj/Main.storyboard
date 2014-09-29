@@ -20,12 +20,12 @@
             </objects>
             <point key="canvasLocation" x="254" y="202"/>
         </scene>
-        <!--Generator Table View Controller-->
+        <!--Alpha Numeric Generator Table View Controller-->
         <scene sceneID="wNB-vo-Kfe">
             <objects>
-                <tableViewController id="mme-Gu-GX7" customClass="PGGeneratorTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AlphaNumericGenerator" id="mme-Gu-GX7" customClass="PGAlphaNumericGeneratorTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="TyZ-Gz-Vet">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -251,6 +251,62 @@
             </objects>
             <point key="canvasLocation" x="706" y="961"/>
         </scene>
+        <!--Memorable Generator Table View Controller-->
+        <scene sceneID="59O-z8-iaK">
+            <objects>
+                <tableViewController storyboardIdentifier="MemorableGenerator" id="54e-UI-Y8s" customClass="PGMemorableGeneratorTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="nSj-HA-2d3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Length" footerTitle="Word list is copyright A G Reinhold and used under the Creative Commons CC-BY 3.0 licence." id="sfm-ku-rPT">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HdK-t2-KRy">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HdK-t2-KRy" id="smj-Xl-U5U">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMF-sA-TSG">
+                                                    <rect key="frame" x="302" y="12" width="10" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bMv-4v-Ab5">
+                                                    <rect key="frame" x="6" y="6" width="290" height="31"/>
+                                                    <connections>
+                                                        <action selector="passwordLengthChanged:" destination="54e-UI-Y8s" eventType="valueChanged" id="Add-Jf-4Se"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bMv-4v-Ab5" firstAttribute="leading" secondItem="smj-Xl-U5U" secondAttribute="leadingMargin" id="D2b-bf-oba"/>
+                                                <constraint firstItem="iMF-sA-TSG" firstAttribute="leading" secondItem="bMv-4v-Ab5" secondAttribute="trailing" constant="8" symbolic="YES" id="JDE-m8-Cuu"/>
+                                                <constraint firstItem="iMF-sA-TSG" firstAttribute="trailing" secondItem="smj-Xl-U5U" secondAttribute="trailingMargin" id="Oq4-oP-vdo"/>
+                                                <constraint firstItem="bMv-4v-Ab5" firstAttribute="centerY" secondItem="smj-Xl-U5U" secondAttribute="centerY" id="Yns-4K-av8"/>
+                                                <constraint firstItem="iMF-sA-TSG" firstAttribute="top" secondItem="smj-Xl-U5U" secondAttribute="topMargin" constant="4" id="sgY-zn-ehX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="54e-UI-Y8s" id="whw-DN-ceT"/>
+                            <outlet property="delegate" destination="54e-UI-Y8s" id="tsU-bh-CAD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="BWG-gi-1rO"/>
+                    <connections>
+                        <outlet property="lengthLabel" destination="iMF-sA-TSG" id="xr1-ji-EH1"/>
+                        <outlet property="lengthSlider" destination="bMv-4v-Ab5" id="UxI-UY-71x"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAE-2n-wne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="1015"/>
+        </scene>
         <!--Password-->
         <scene sceneID="hRm-wj-eiG">
             <objects>
@@ -322,8 +378,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLf-aG-gVQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gzT-uH-C18">
+                                <rect key="frame" x="16" y="72" width="288" height="29"/>
+                                <segments>
+                                    <segment title="Alpha-numeric"/>
+                                    <segment title="Memorable"/>
+                                </segments>
+                                <connections>
+                                    <action selector="passwordGeneratorChanged:" destination="ODV-Sw-Ruk" eventType="valueChanged" id="Xht-oZ-dVh"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nLf-aG-gVQ">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <connections>
                                     <segue destination="mme-Gu-GX7" kind="embed" identifier="GeneratorTableEmbed" id="Mdv-hv-Ymw"/>
                                 </connections>
@@ -331,10 +397,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="nLf-aG-gVQ" secondAttribute="trailing" constant="-16" id="Cc0-qB-ODZ"/>
-                            <constraint firstItem="nLf-aG-gVQ" firstAttribute="leading" secondItem="fqb-ra-i6c" secondAttribute="leadingMargin" constant="-16" id="gFM-tr-4sq"/>
-                            <constraint firstItem="47u-qJ-ZFD" firstAttribute="top" secondItem="nLf-aG-gVQ" secondAttribute="bottom" id="ozc-sC-KuS"/>
-                            <constraint firstItem="nLf-aG-gVQ" firstAttribute="top" secondItem="koH-DO-V9F" secondAttribute="bottom" constant="-64" id="qC2-uN-rxN"/>
+                            <constraint firstItem="47u-qJ-ZFD" firstAttribute="top" secondItem="nLf-aG-gVQ" secondAttribute="bottom" id="5ld-Uh-7EC"/>
+                            <constraint firstItem="nLf-aG-gVQ" firstAttribute="top" secondItem="gzT-uH-C18" secondAttribute="bottom" constant="8" symbolic="YES" id="Nmc-aP-zZa"/>
+                            <constraint firstItem="nLf-aG-gVQ" firstAttribute="leading" secondItem="fqb-ra-i6c" secondAttribute="leadingMargin" constant="-16" id="Vyj-7N-XhP"/>
+                            <constraint firstItem="gzT-uH-C18" firstAttribute="trailing" secondItem="fqb-ra-i6c" secondAttribute="trailingMargin" id="Xk2-3a-3ys"/>
+                            <constraint firstItem="gzT-uH-C18" firstAttribute="leading" secondItem="fqb-ra-i6c" secondAttribute="leadingMargin" id="dca-gq-al1"/>
+                            <constraint firstItem="nLf-aG-gVQ" firstAttribute="top" secondItem="gzT-uH-C18" secondAttribute="bottom" constant="8" id="mnB-M7-efm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nLf-aG-gVQ" secondAttribute="trailing" constant="-16" id="vqx-xr-vxD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ShZ-wu-vI5">
@@ -346,6 +415,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="generateButton" destination="XiG-bm-z6O" id="DgR-f9-EZc"/>
+                        <outlet property="generatorContainer" destination="nLf-aG-gVQ" id="opM-QT-kFv"/>
+                        <outlet property="passwordGeneratorControl" destination="gzT-uH-C18" id="NFr-Lg-VLn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vS4-VI-NBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
