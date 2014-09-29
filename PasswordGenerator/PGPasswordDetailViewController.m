@@ -38,13 +38,32 @@
 
 - (IBAction)generatePassword:(id)sender {
     self.password = [self.generator generate];
+    [self displayPassword:self.password];
+}
 
+-(void)viewDidLayoutSubviews {
+}
+
+- (BOOL)isLandscape {
+    if (self.view.frame.size.width == ([[UIScreen mainScreen] bounds].size.width * ([[UIScreen mainScreen] bounds].size.width < [[UIScreen mainScreen] bounds].size.height))
+        + ([[UIScreen mainScreen] bounds].size.height * ([[UIScreen mainScreen] bounds].size.width > [[UIScreen mainScreen] bounds].size.height))) {
+        return NO;
+    }
+    return YES;
+}
+
+- (void) didRotateFromInterfaceOrientation: (UIInterfaceOrientation) fromInterfaceOrientation {
+    [self displayPassword:self.password];
+}
+
+- (void)displayPassword:(NSString *)password {
     NSMutableAttributedString *formattedPassword;
     if ([self.generator isFormatted]) {
-        formattedPassword = [[NSMutableAttributedString alloc] initWithString:self.password];
+        formattedPassword = [[NSMutableAttributedString alloc] initWithString:password];
     } else {
         PGPasswordFormatter *passwordFormatter = [[PGPasswordFormatter alloc] initWithLineBreaks:YES];
-        formattedPassword = [[NSMutableAttributedString alloc] initWithAttributedString:[passwordFormatter format:self.password]];
+        [passwordFormatter setLineWidthInGroups:(int) self.view.frame.size.width / 100];
+        formattedPassword = [[NSMutableAttributedString alloc] initWithAttributedString:[passwordFormatter format:password]];
     }
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -57,6 +76,7 @@
     
     [self.passwordLabel setAttributedText:formattedPassword];
     [self.passwordLabel sizeToFit];
+
 }
 
 @end

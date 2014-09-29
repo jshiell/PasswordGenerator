@@ -12,12 +12,6 @@ Features
 * Resulting passwords can be thrown to the standard iOS sharing tools
 
 
-To Do
------
-
-* Fix landscape layout on detail view.
-
-
 Acknowledgements
 ----------------
 
