@@ -55,7 +55,7 @@
 		C792454319C9D019008C350D /* PGPasswordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPasswordDetailViewController.m; sourceTree = "<group>"; };
 		C792454519C9D32A008C350D /* PGPasswordFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPasswordFormatter.h; sourceTree = "<group>"; };
 		C792454619C9D32A008C350D /* PGPasswordFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPasswordFormatter.m; sourceTree = "<group>"; };
-		C7B691AC19CAEF4000D1F81B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7B691AC19CAEF4000D1F81B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7C55E4E19C7028A00C15615 /* PGAlphaNumericGeneratorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAlphaNumericGeneratorTableViewController.h; sourceTree = "<group>"; };
 		C7C55E4F19C7028A00C15615 /* PGAlphaNumericGeneratorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGAlphaNumericGeneratorTableViewController.m; sourceTree = "<group>"; };
 		C7E44E7619D990C10093D1D3 /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = SOURCE_ROOT; };
