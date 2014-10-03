@@ -21,6 +21,6 @@
 @property (nonatomic) BOOL allowRepitition;
 
 - (NSString*)generate;
-- (BOOL)isFormatted;
+- (BOOL)hasSignificantWhitespace;
 
 @end

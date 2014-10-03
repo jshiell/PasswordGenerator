@@ -13,9 +13,10 @@
 @property (nonatomic, strong) UIColor* numberColour;
 @property (nonatomic, strong) UIColor* punctuationColour;
 @property (nonatomic) NSInteger lineWidthInGroups;
-@property (nonatomic) BOOL useLineBreaks;
+@property (nonatomic) BOOL wrapLines;
+@property (nonatomic) BOOL addSpacing;
 
--(id) initWithLineBreaks:(BOOL)useLineBreaks;
+-(id) initWithSpacingAdded:(BOOL)addSpacing andWrapping:(BOOL)useLineBreaks;
 
 -(NSAttributedString *) format:(NSString *)password;
 

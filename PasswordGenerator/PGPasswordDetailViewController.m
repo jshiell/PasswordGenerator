@@ -57,14 +57,9 @@
 }
 
 - (void)displayPassword:(NSString *)password {
-    NSMutableAttributedString *formattedPassword;
-    if ([self.generator isFormatted]) {
-        formattedPassword = [[NSMutableAttributedString alloc] initWithString:password];
-    } else {
-        PGPasswordFormatter *passwordFormatter = [[PGPasswordFormatter alloc] initWithLineBreaks:YES];
-        [passwordFormatter setLineWidthInGroups:(int) self.view.frame.size.width / 100];
-        formattedPassword = [[NSMutableAttributedString alloc] initWithAttributedString:[passwordFormatter format:password]];
-    }
+    PGPasswordFormatter *passwordFormatter = [[PGPasswordFormatter alloc] initWithSpacingAdded:![self.generator hasSignificantWhitespace] andWrapping:YES];
+    [passwordFormatter setLineWidthInGroups:(int) self.view.frame.size.width / 100];
+    NSMutableAttributedString *formattedPassword = [[NSMutableAttributedString alloc] initWithAttributedString:[passwordFormatter format:password]];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.paragraphSpacing = 1;

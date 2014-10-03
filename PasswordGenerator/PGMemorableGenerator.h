@@ -14,6 +14,6 @@
 @property (nonatomic) int length;
 
 - (NSString*)generate;
-- (BOOL)isFormatted;
+- (BOOL)hasSignificantWhitespace;
 
 @end

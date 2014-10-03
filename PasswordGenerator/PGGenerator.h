@@ -11,6 +11,6 @@
 @protocol PGGenerator <NSObject>
 
 - (NSString*)generate;
-- (BOOL)isFormatted;
+- (BOOL)hasSignificantWhitespace;
 
 @end

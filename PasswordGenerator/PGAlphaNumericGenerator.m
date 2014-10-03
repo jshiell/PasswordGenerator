@@ -50,7 +50,7 @@
     return [generated copy];
 }
 
-- (BOOL)isFormatted {
+- (BOOL)hasSignificantWhitespace {
     return NO;
 }
 
